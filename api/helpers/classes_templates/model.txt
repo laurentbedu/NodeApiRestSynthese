@@ -1,0 +1,6 @@
+/*auto-generated*/
+const DbModel = require("./db.model");
+class ClassName extends DbModel{  
+
+}
+module.exports = ClassName;

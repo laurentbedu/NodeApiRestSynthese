@@ -1,0 +1,6 @@
+/*auto-generated*/
+const DbService = require("./db.service");
+class ClassName extends DbService{  
+
+}
+module.exports = ClassName;
