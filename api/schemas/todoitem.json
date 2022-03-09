@@ -1,0 +1,26 @@
+{
+  "id": {
+    "type": "number",
+    "default": null
+  },
+  "title": {
+    "type": "string",
+    "default": null
+  },
+  "is_important": {
+    "type": "boolean",
+    "default": false
+  },
+  "is_checked": {
+    "type": "boolean",
+    "default": false
+  },
+  "deleted": {
+    "type": "boolean",
+    "default": false
+  },
+  "todolist_id": {
+    "type": "number",
+    "default": null
+  }
+}

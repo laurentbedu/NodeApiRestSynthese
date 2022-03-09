@@ -1,0 +1,18 @@
+{
+  "id": {
+    "type": "number",
+    "default": null
+  },
+  "email": {
+    "type": "string",
+    "default": null
+  },
+  "pin_code": {
+    "type": "string",
+    "default": null
+  },
+  "deleted": {
+    "type": "boolean",
+    "default": false
+  }
+}

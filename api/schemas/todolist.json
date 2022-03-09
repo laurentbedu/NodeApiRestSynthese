@@ -1,0 +1,26 @@
+{
+  "id": {
+    "type": "number",
+    "default": null
+  },
+  "title": {
+    "type": "string",
+    "default": null
+  },
+  "updated_at": {
+    "type": "date",
+    "default": null
+  },
+  "deleted": {
+    "type": "boolean",
+    "default": false
+  },
+  "color_id": {
+    "type": "number",
+    "default": null
+  },
+  "user_id": {
+    "type": "number",
+    "default": null
+  }
+}
