@@ -46,8 +46,10 @@ class DbService {
 
   static initialize = async () => {
     const tables = await DbService.getTables();
+
     for (const table of tables) {
       const tableColumns = await DbService.executeQuery(`SHOW FULL COLUMNS FROM ${table.name}`);
+
       const columns = {};
       for (const column of tableColumns) {
         columns[column.Field] = {};

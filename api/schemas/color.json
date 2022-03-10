@@ -14,5 +14,9 @@
   "deleted": {
     "type": "boolean",
     "default": false
+  },
+  "test": {
+    "type": "number",
+    "default": 12
   }
 }

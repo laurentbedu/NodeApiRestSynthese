@@ -8,21 +8,27 @@ const cors = require("cors");
 app.use(
   cors({
     origin: ["http://localhost:3000"],
-    credentials: true
+    credentials: true,
   })
 );
 
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({ extended: true }));
 
 const cookieParser = require("cookie-parser");
 app.use(cookieParser());
 
-const dbService = require('./api/services/db.service');
-dbService.initialize();
+const dbService = require("./api/services/db.service");
+dbService.initialize().then(() => {
+  const routers = require("./api/routers");
+  const auth = require("./api/middlewares/auth.middleware");
+  for (const route in routers) {
+    const router = new routers[route]().router;
+    app.use(`/${route}`, router, auth);
+  }
+});
 
 const config = require("./api/configs")("app");
 app.listen(config.PORT, () => {
   console.log(`Server is running on port ${config.PORT}.`);
 });
-
