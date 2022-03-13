@@ -17,6 +17,17 @@ class AuthRouter extends BaseRouter {
             next(this.controller.auth);
         });
 
+        this.router.post("/create", async (req, res, next) => {
+            next(this.controller.create);
+        });
+
+        this.router.post("/login", async (req, res, next) => {
+            next(this.controller.login);
+        });
+
+        this.router.get("/renew", async (req, res, next) => {
+            next(this.controller.renew);
+        });
     }
 
 }
